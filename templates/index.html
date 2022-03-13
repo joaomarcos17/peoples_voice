@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+<style>
+p{
+
+font-size: 20px;
+}
+
+
+</style>
+</head>
+
+
+<h1>People's voice home page </h1>
+
+<p>Hello everyone welcome to the peoples voice website !</p>
+
+  {% for i in content %}
+  
+ 
+    <p>{{i}}</p>
+	
+
+	{% endfor %}
+
+</html>

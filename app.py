@@ -1,15 +1,13 @@
-from flask import Flask
-
+from flask import Flask, redirect, url_for, render_template
+#this a simple website in flask, flask is a python framework
 app = Flask(__name__)
-
+# this website has three pages 
 @app.route('/')
 def index():
-    return "<h1>Hello welcome to people's voice</h1>"
-
-@app.route('/about')
-def about():
-    return "<h1>About people's voice</h1>"
-
+    return render_template("index.html", content=['rebecca','donkey','joao'])
+@app.route('/tribute')
+def tribute():
+    return render_template("tribute.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
