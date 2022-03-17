@@ -1,5 +1,5 @@
 
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
 #this a simple website in flask, flask is a python framework
 app = Flask(__name__)
 # this website has three pages
@@ -21,6 +21,23 @@ def news():
 def webapp():
     return render_template("webapp.html")
 
+# form
+
+@app.route('/log')
+def log():
+    return render_template("get.html") 
+
+@app.route('/login', methods=['POST','GET'])
+def login():
+    if request.method == 'POST':
+        user = request.form["nm"]
+        return redirect(url_for("user",usr=user))
+    else:
+        return render_template("login.html")
+
+@app.route('/<usr>')
+def user(usr):
+    return f"<h1>{usr}</h1>"
 
 
 if __name__ == '__main__':
