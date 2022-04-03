@@ -2,61 +2,66 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-<title>{% block title %}{% endblock %}</title>
-<link rel="stylesheet" href="style.css">
-<style>
-  main{
-    padding: 3rem;
-}
-</style>
+<title>Welcome to peoples voice</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
 </head>
 
 <!-- navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#"><strong>People's voice</strong></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">News</a>
+        <a class="nav-link" href="#">Blog</a>
+       
+      </div>
     </div>
   </div>
 </nav>
 
 <!-- title -->
-<h1>Hello Everyone</h1>
 
-{% block content %}
-{% endblock %}
+
+<img src="{{ url_for('static', filename='images/megaphone.jpg') }}" alt="megaphone_image">
+
+<div class="card">
+  <div class="card-body">
+
+<h1>Welcome to people's voice community</h1>
+
+<br>
+
+
+
+<p>The people's voice is intended to bring freedom of speech to the masses, this is our priority, here you are free to express and give your opinion, without to worry about censorship</p>
+<p> we are politically neutral the only side we support is the freedom of speech something that other social medias don't seem to care as we see more and more censorship in the mainstream media and social media platforms. </p>
+
+
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- bootstrap js -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </html>
